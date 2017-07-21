@@ -1,10 +1,14 @@
 apply plugin: 'groovy'
 
-sourceSets {
-    jobs {
-        groovy {
-            srcDirs 'jobs'
-        }
+apply plugin: 'com.github.johnrengelman.shadow'
+apply plugin: 'java'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.4'
     }
 }
 

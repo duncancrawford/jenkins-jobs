@@ -23,9 +23,10 @@ class JobsSpec extends Specification {
 
     private static List<File> getJobFiles() {
         List<File> files = []
-        new File('jobs').eachFileRecurse(FILES) {
+        new File('test-jobs').eachFileRecurse(FILES) {
             files << it
         }
+        println(files)
         files
     }
 }
