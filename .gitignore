@@ -3,6 +3,7 @@
 *.iml
 *.iws
 build
+out
 .gradle
 target
 !**/ci_open_jenkins/build
