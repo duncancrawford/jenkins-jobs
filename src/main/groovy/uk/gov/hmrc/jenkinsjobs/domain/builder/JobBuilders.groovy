@@ -13,7 +13,7 @@ import static uk.gov.hmrc.jenkinsjobs.domain.variable.TmpDirEnvironmentVariable.
 import static uk.gov.hmrc.jenkinsjobs.domain.variable.PathEnvironmentVariable.pathEnvironmentVariable
 import static uk.gov.hmrc.jenkinsjobbuilders.domain.wrapper.ColorizeOutputWrapper.colorizeOutputWrapper
 import static uk.gov.hmrc.jenkinsjobbuilders.domain.wrapper.PreBuildCleanupWrapper.preBuildCleanUpWrapper
-import static uk.gov.hmrc.jenkinsjobs.domain.scm.HmrcGitHubComScm.hmrcGitHubComScm
+import static uk.gov.hmrc.jenkinsjobs.domain.scm.OrganisationGitHubComScm.hmrcGitHubComScm
 import static uk.gov.hmrc.jenkinsjobs.domain.variable.JavaHomeEnvironmentVariable.javaHomeEnvironmentVariable
 import static uk.gov.hmrc.jenkinsjobs.domain.variable.JavaVersionEnvironmentVariable.JDKLATEST
 
