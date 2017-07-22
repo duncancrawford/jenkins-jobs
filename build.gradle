@@ -1,7 +1,4 @@
-apply plugin: 'groovy'
 
-apply plugin: 'com.github.johnrengelman.shadow'
-apply plugin: 'java'
 
 buildscript {
     repositories {
@@ -9,8 +6,16 @@ buildscript {
     }
     dependencies {
         classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.4'
+        classpath "com.palantir.gradle.gitversion:gradle-git-version:0.8.0"
     }
 }
+
+apply plugin: 'groovy'
+
+apply plugin: 'com.github.johnrengelman.shadow'
+apply plugin: 'java'
+apply plugin: "com.palantir.git-version"
+
 
 repositories {
     mavenLocal()
@@ -38,3 +43,14 @@ task relativeDependencies(type: Copy) {
 }
 
 project.tasks.build.dependsOn(relativeDependencies)
+
+version gitVersion()
+
+//def details = versionDetails()
+//details.lastTag
+//details.commitDistance
+//details.gitHash
+//details.branchName // is null if the repository in detached HEAD mode
+//details.isCleanTag
+//
+//println(details.toString())
